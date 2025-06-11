@@ -35,7 +35,7 @@ def get_coins(vs_currency: str = 'usd') -> list[Coin]:
             Coin(
             id=item['id'],
             name=item['name'],
-            symbol=item['symbol']
+            symbol=item['symbol'],
             current_price=item['current_price'],
             high_24h=item['high_24h'],
             low_24h=item['low_24h'],
