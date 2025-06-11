@@ -65,7 +65,7 @@ def get_price_history(coin_id: str, vs_currency: str = 'usd', days: int = 7) -> 
         return[]
     
 st.set_page_config(page_title="Crypto Tracker Dashboard", layout="wide")
-st.title("Reaal-time Crypto Tracker Dashboard")
+st.title("Real-time Crypto Tracker Dashboard")
 
 currency = st.sidebar.selectbox("Select Currency", ['usd', 'inr', 'eur', 'jpy'])
 coins = get_coins(currency)
