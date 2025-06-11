@@ -47,7 +47,7 @@ def get_coins(vs_currency: str = 'usd') -> list[Coin]:
         st.error(f"Error fetching coins {e}")
         return []
     
-def get_price_history(coin_id: str, vs_currency: str = 'USD', days: int = 7) -> pd.DataFrame:
+def get_price_history(coin_id: str, vs_currency: str = 'usd', days: int = 7) -> pd.DataFrame:
     url = HISTORY_URL.format(id=coin_id)
     params = {'vs_currency': vs_currency, 'days': days}
 
