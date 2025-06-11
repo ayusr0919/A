@@ -47,7 +47,7 @@ def get_coins(vs_currency: str = 'usd') -> list[Coin]:
         st.error(f"Error fetching coins {e}")
         return []
     
-def get_price_history(coin_id: str, vs_currency: str = 'usd', days: int = 7) -> pd.DataFrame:
+def get_price_history(coin_id: str, vs_currency: str = 'USD', days: int = 7) -> pd.DataFrame:
     url = HISTORY_URL.format(id=coin_id)
     params = {'vs_currency': vs_currency, 'days': days}
 
@@ -67,7 +67,7 @@ def get_price_history(coin_id: str, vs_currency: str = 'usd', days: int = 7) -> 
 st.set_page_config(page_title="Crypto Tracker Dashboard", layout="wide")
 st.title("Real-time Crypto Tracker Dashboard")
 
-currency = st.sidebar.selectbox("Select Currency", ['usd', 'eur', 'jpy'])
+currency = st.sidebar.selectbox("Select Currency", ['USD', 'EUR', 'JPY'])
 coins = get_coins(currency)
 
 if coins:
