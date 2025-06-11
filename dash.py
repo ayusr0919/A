@@ -3,7 +3,6 @@ import requests
 import pandas as pd
 from dataclasses import dataclass
 from typing import Final
-import matplotlib.pyplot as plt
 
 BASE_URL: Final[str] = 'https://api.coingecko.com/api/v3/coins/markets'
 HISTORY_URL: Final[str] = 'https://api.coingecko.com/api/v3/coins/{id}/market_chart'
